@@ -7,40 +7,41 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
 
-    private Vector2 direcao;
-    public int velocidade;
+    private Vector2 direcao;  //Vetor que indica a direçao do movimento
+    public int velocidade;  //Velocidade do personagem
 
-	// Use this for initialization
+	// Função chamada na inicialização
 	void Start () {
-        direcao = Vector2.zero;
+        direcao = Vector2.zero;  //Zera o vetor de direcao
 	}
 	
-	// Update is called once per frame
+	// Função chamada a cada atualização de frame
 	void Update () {
-        direcaotoMove();
+        direcaotoMove(); //detecta a tecla acionada
 
-         transform.Translate(direcao * velocidade * Time.deltaTime);
+         transform.Translate(direcao * velocidade * Time.deltaTime); // move o personagem de acordo com o vetor vezes a velocidade
+
 	}
 
-    private void direcaotoMove()
+    private void direcaotoMove()  //Funcao responsavel por detectar teclas acionadas
     {
-        direcao = Vector2.zero;
+        direcao = Vector2.zero; //Zera o vetor de direcao
 
-        if(Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(KeyCode.UpArrow)) //se a tecla cima for acionada
         {
-            direcao = Vector2.up;
+            direcao = Vector2.up; // Aponta o vetor paca cima
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow)) //se a tecla baixo for acionada
         {
-            direcao = Vector2.down;
+            direcao = Vector2.down; //Aponta o vetor para baixo
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow)) //se a tecla esquerda for acionada
         {
-            direcao = Vector2.left;
+            direcao = Vector2.left; //aponta o vetor para a esquerda
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow)) //se a tecla direita for acionada
         {
-            direcao = Vector2.right;
+            direcao = Vector2.right; //apona o vetor para a direita
         }
 
     }

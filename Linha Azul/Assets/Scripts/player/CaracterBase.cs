@@ -8,13 +8,13 @@ public abstract class CaracterBase : MonoBehaviour {
 
     // Use this for initialization
 
-    public float HpMaximo;
-    public float MpMaximo;
-    public float forca;
-    public float magica;
-    public float defesaBase;
-    public float defesaMagicaBase;
-    public float hit;
+    public float HpMaximo; //HP do personagem
+    public float MpMaximo; //MP
+    public float forca; //FORCA
+    public float magica; //MAGICA
+    public float defesaBase; //DEFESA 
+    public float defesaMagicaBase; //DEFESA MAGICA
+    public float hit; //HIT
 
 	void Start () {
 		
